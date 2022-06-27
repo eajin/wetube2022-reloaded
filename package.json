@@ -2,15 +2,20 @@
   "name": "wetube",
   "version": "1.0.0",
   "description": "The best way to watch videos.",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eajin/wetube2022-reloaded.git"
+  },
+  "scripts": {
+    "win": "node index.js"
   },
   "author": "Kjin",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/eajin/wetube2022-reloaded/issues"
   },
-  "homepage": "https://github.com/eajin/wetube2022-reloaded#readme"
+  "homepage": "https://github.com/eajin/wetube2022-reloaded#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
