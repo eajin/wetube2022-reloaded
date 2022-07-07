@@ -1,10 +1,18 @@
 /* globalRouter */
-const fakeUser = {
-  username: "Nicolas",
-  loggedIn: false,
+export const trending = (req, res) => {
+  const videos = [
+    {
+      title: "Hello",
+    },
+    {
+      title: "Video #2",
+    },
+    {
+      title: "Whatsup",
+    },
+  ];
+  res.render("home", { pageTitle: "Home", videos });
 };
-export const trending = (req, res) =>
-  res.render("home", { pageTitle: "Home", fakeUser });
 export const search = (req, res) => res.send("Search");
 /* videoRouter.js */
 export const see = (req, res) => res.render("watch", { pageTitle: "Watch" });
