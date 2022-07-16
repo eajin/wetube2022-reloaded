@@ -6,6 +6,9 @@ import Video from "../models/Video";
 export const home = (req, res) => {
   console.log("Start");
   Video.find({}, (error, videos) => {
+    if(error){
+      return res.render("server-error")
+    }
     return res.render("home", { pageTitle: "Home", videos });
   });
   console.log("Finished");
