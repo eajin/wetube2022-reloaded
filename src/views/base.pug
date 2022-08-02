@@ -8,12 +8,17 @@ html(lang="en")
     title #{ pageTitle } | Wetube
   body
     header 
-      h1= pageTitle
+      h1= pagetitle
       nav 
         ul 
           li 
             a(href="/") Home
-          if !req.session.loggedIn
+          if loggedIn
+            li 
+              a(href="/logout") Log Out
+            li 
+              a(href="/my-profile") #{ loggedInUser.name }의 Profile
+          else
             li 
               a(href="/join") Join
             li 
